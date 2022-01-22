@@ -1,0 +1,75 @@
+html {
+    background-color: aquamarine;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    width: 90%;
+
+    background-color: indigo;
+
+    padding-left: 1em;
+    padding-right: 2em;
+    padding-top: 1.5em;
+    padding-bottom: 2.5em;
+
+    margin-top : 1em;
+    margin-left: auto;
+    margin-right: auto;
+    
+
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    width: 99%;
+
+    background-color: hotpink;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    width: 100%;
+
+    background-color: hotpink;
+}
+
+aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    width: 99%;
+
+    background-color: darkblue;
+}
+
+p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    width: 99%;
+
+    background-color: lightgreen;
+
+    border-radius: 20px;
+
+    padding: 0px;
+
+    margin: 10px;
+}

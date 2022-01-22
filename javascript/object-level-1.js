@@ -1,3 +1,4 @@
+console.log("Object Level 1");
 // In JavaScript
 // Object is something very important
 

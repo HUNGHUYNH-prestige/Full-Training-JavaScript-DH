@@ -54,3 +54,8 @@ console.log(type_pokemon);
 
 let level_pokemon = lookup_for_something("level");
 console.log(level_pokemon);
+
+
+let catched_pokemon = lookup_for_something("catched");
+console.log(catched_pokemon);
+

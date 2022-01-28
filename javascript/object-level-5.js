@@ -122,3 +122,82 @@ for (let letter of message) {
 
 // This is so cool, isn't it ?
 
+
+
+// When facing an array, there is another solution : forEach()
+
+let charizard = [
+    "Charizard",
+    "Fire",
+    "Flamethrower"
+];
+
+console.log(charizard);
+
+charizard.forEach( function (info, index) {
+    console.log(info);
+    console.log(index);
+});
+
+charizard.forEach( (info, index) => {
+    console.log(`${info} is at index : ${index}`);
+});
+
+// This is another new thing to do and test
+// Use Object.keys()
+
+Object.keys(charizard).forEach( function (info, index) {
+    console.log("this type is : " + typeof info );
+    console.log(`this type is : ${typeof index}`);
+    console.log(charizard[info]);
+    console.log(charizard[index]);
+});
+
+
+
+// Otherwise, there is a classic and simple loop for
+
+let bulbasaur = {
+    name : "Bulbasaur",
+    type : "Grass",
+    attack : "Solar Beam"
+};
+
+console.log(bulbasaur);
+
+for (let index = 0; index < Object.keys(bulbasaur).length; index++) {
+    // This is something very interesting
+    // How to get the length of an object if the object is not an array
+    // Well, this is actually pretty cool
+    // Use Object.keys() method to get all keys from an Object
+    // Then use length property for an array
+    // Finally, it is possible to get a length for any object
+    console.log(index);
+    // Since this is an array
+    console.log(Object.keys(bulbasaur));
+    // Therefore, get all the array items
+    console.log(Object.keys(bulbasaur)[index]);
+
+};
+
+
+// Let use a for loop in an array
+
+// To conclude this demo
+
+let charmander = [
+    "Charmender",
+    "Fire",
+    "Red",
+    20,
+    4
+];
+
+console.log(charmander);
+
+for (let position = 0; position < charmander.length; position++) {
+    //console.log(position);
+    console.log(`This is the content : ${charmander[position]}`);
+}
+
+// This is the end for now

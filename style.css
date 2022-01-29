@@ -28,7 +28,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 
     width: 99%;
 

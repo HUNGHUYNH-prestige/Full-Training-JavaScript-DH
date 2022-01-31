@@ -313,12 +313,21 @@ object_cookie_property_names.forEach((index_of_cookie) => {
     console.log(`The value is  : --- ${object_cookie[index_of_cookie]} --- \nThe property is : --- ${index_of_cookie} ---`);
 });
 
-// for loop
+// for loop with incrementation
 for (let position = 0; position < object_cookie_property_names.length; position++) {
-    console.log(`The property : ${object_cookie_property_names[position]}
-    \nThe value : ${object_cookie[object_cookie_property_names[position]]}
+    console.log(`The property object_cookie_property_names[${position}] : ${object_cookie_property_names[position]}
+    \nThe value of ${object_cookie_property_names[position]} : ${object_cookie[object_cookie_property_names[position]]}
     \nThe position : { ${position} }`);
 };
+
+// for in 
+for (let inside_object_cookie in object_cookie) {
+    console.log(
+        "The property is : " + inside_object_cookie + " ---" +
+        " The value is : " + object_cookie[inside_object_cookie]
+        );
+};
+
 
 // Use other method from other level
 // Then do the same thing to an array to test and practice the for loop

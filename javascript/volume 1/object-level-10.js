@@ -92,6 +92,15 @@ console.log(array_of_something_easy);
 let find_index_in_the_array = array_of_something_easy.indexOf("pomme");
 console.log(find_index_in_the_array);
 
+// Check the array after operation
+console.log(array_of_something_easy)
+// This is interesting !
+// In the console, there is the array with full value
+// But, when open the array, only the remaining value is inside
+
+// Terrifying ! 
+// --- --- ---
+
 // What is the type of the index in the array.indexOf() method
 console.log(typeof find_index_in_the_array);
 // It returns a number as an index for the position in the array
@@ -105,6 +114,12 @@ console.log(remove_something_by_index);
 // This is interesting
 // The content removed is an array with the value removed
 // Do not expect to have only the value as a string or a number
+
+// What is the type of the removed item
+console.log(typeof remove_something_by_index);
+// This is an object
+// Remember an array is an object
+// Here, do not expect to get a string or a number
 
 // This is cool !
 

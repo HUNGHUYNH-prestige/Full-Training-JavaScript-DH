@@ -211,6 +211,10 @@ for (let object_cookie_item of object_cookie) {
 
 // for of can be used with an array
 
+for (array_cookie_index of array_cookie) {
+    console.log(`The value is : --- ${array_cookie_index} ---`);
+}
+
 // The topic for is enumerable property is a real topic
 // Later something will be done on this subject
 
@@ -283,12 +287,15 @@ for (let array_for_data_reception of string_entries) {
 
 // Object ---
 
-// The trick is to use a method to transform the object into something array like in order to get the length property
+// The trick is to use a method to transform the object into something like an array in order to get the length property
 
 // Magic trick 1 : Object.getOwnPropertyNames(object as object) method
 
 let object_cookie_property_names = Object.getOwnPropertyNames(object_cookie);
 console.log(object_cookie_property_names);
+
+// Since the Object.getOwnPropertyNames() method returns an array
+// Then use all array methods to loop through it
 
 // for in : position = 1,2,3, ...
 for (let position in object_cookie_property_names) {
@@ -320,7 +327,7 @@ for (let position = 0; position < object_cookie_property_names.length; position+
     \nThe position : { ${position} }`);
 };
 
-// for in 
+// for in : object as object
 for (let inside_object_cookie in object_cookie) {
     console.log(
         "The property is : " + inside_object_cookie + " ---" +
@@ -328,12 +335,32 @@ for (let inside_object_cookie in object_cookie) {
         );
 };
 
-
-// Use other method from other level
-// Then do the same thing to an array to test and practice the for loop
-
 // Array ---
-
 for (let index = 0; index < array_cookie.length; index++) {
-    console.log(index);
+    console.log(`The index is : ${index}
+    \nThe value is : ${array_cookie[index]}
+    \nThe syntax is : array_cookie[${index}]`);
 };
+
+// Let's try Object.getownPropertyNames(array)
+let array_cookie_property_names = Object.getOwnPropertyNames(array_cookie);
+console.log(array_cookie_property_names);
+
+for (array_cookie_position = 0; array_cookie_position < array_cookie_property_names.length; array_cookie_position++) {
+    console.log(array_cookie_position);
+    // Notice that there is something unexpected such as : length in the array values
+
+    console.log(`This is the position : ${array_cookie_position}
+    \nThis is the value : ${array_cookie_property_names[array_cookie_position]}`);
+};
+
+// Well the work is done for now
+
+// Have seen the for loop through an object and an array
+
+// The for of loop cannot be used in an object
+
+// The for of loop is working in an array
+
+// Use it with caution
+

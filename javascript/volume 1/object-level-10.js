@@ -93,7 +93,8 @@ let find_index_in_the_array = array_of_something_easy.indexOf("pomme");
 console.log(find_index_in_the_array);
 
 // Check the array after operation
-console.log(array_of_something_easy)
+console.log(array_of_something_easy[0]);
+console.log(array_of_something_easy[1]);
 // This is interesting !
 // In the console, there is the array with full value
 // But, when open the array, only the remaining value is inside
@@ -122,4 +123,221 @@ console.log(typeof remove_something_by_index);
 // Here, do not expect to get a string or a number
 
 // This is cool !
+
+// Here is more
+
+// You want more
+// You'll get more
+
+// Let's remove items from an index position
+
+let pokemon = ["Pikachu", "Mewtwo", "Charizard", "Latios", "Rattata", "Alakazam", "Nothing"];
+console.log(pokemon);
+
+// Let's set the position to start with
+let position_start = 2;
+
+// Let's set the position to end with
+let number_of_element_inside_in_the_array = 3;
+
+// Let's remove a list of items
+let remove_item = pokemon.splice(position_start, number_of_element_inside_in_the_array);
+console.log(remove_item);
+
+// This method removes an array of values in the original array
+// Therefore, the value in remove_item is : ["Charizard", "Latios", "Rattata"]
+// This the value from array[2] to array[4]
+// Another way to understand that is to consider : from array[2] remove 3 items
+
+// Let's see the final result
+console.log(pokemon);
+
+// As expected, the final result does not have the removed values
+
+// The method array.splice() can be used to cut through the array and it removes items
+
+
+// Here is the formula of splice() function
+/*
+
+splice(starting_position_in_the_array, number_of_items_to_remove, "replacing value if needed")
+
+number_of_items_to_remove is optionnal
+"replacing value if needed" is also optionnal
+
+*/
+
+
+
+// === === Definition and explanation === ===
+
+// A function in an object is called method
+// Therefore, array.splice() is a method
+
+
+
+// Let's play with array.splice() method to manage the data in an array
+
+// --- --- case 1 :  remove 0 item from index position 1 --- ---
+let array_fire_pokemon = ["Charizard", "Moltres", "Vulpix", "Ponyta", "Magmar"];
+console.log(array_fire_pokemon);
+
+let remove_nothing = array_fire_pokemon.splice(1,0);
+console.log(array_fire_pokemon);
+
+// The value removed is :
+console.log(remove_nothing);
+// The result is an empty array
+
+// (*__*) The removed value is stored in an array [*__*]
+
+// --- --- case 1 : conclusion ==> nothing happen, 0 change
+
+
+
+// --- --- case 2 : remove 1 item from index position 1 --- ---
+let remove_one_item = array_fire_pokemon.splice(1,1);
+console.log(array_fire_pokemon);
+
+// The removed value is :
+console.log(remove_one_item);
+// As expected, the value is removed and stored in an array
+
+// --- --- case 2 : conclusion ==> 1 item at index 1 has been removed from the array
+
+
+
+
+// How to manage data inside the array with the splice() method ?
+
+// --->>> case 3 : adding a new item <<<---
+
+// Using the same array
+let moltres_shiny = array_fire_pokemon.splice(1,0, "Moltres shiny");
+console.log(array_fire_pokemon);
+
+// Let's see the value alone
+console.log(moltres_shiny);
+// This is an empty array
+
+// --->>> case 3 : conclusion ==> adding 1 item at index 1 and remove 0 item from the array
+
+
+
+
+
+// ===> case 4 : replacing an item by another one <===
+
+// Using the same array
+let vulpix_evolve = array_fire_pokemon.splice(2, 1, "Ninetails");
+console.log(array_fire_pokemon);
+
+// This is nice !
+
+// Vulpix has evolved into Ninetails !
+
+// Let's see the vulpix_evolve content :
+console.log(vulpix_evolve);
+// This array contains the value "Vulpix" as expected
+// Everything is working so fine !
+
+// ===> case 4 : conclusion ==> data management : replacing is a success
+
+
+
+// -- -- -- case 5 : what happen if there is no param in the splice() ?
+
+// Using the same array
+let nothing_in_param = array_fire_pokemon.splice();
+console.log(nothing_in_param);
+// It returns an empty array, since nothing is done
+
+console.log(array_fire_pokemon);
+// The original array is looking fine : 0 change
+
+// -- -- -- case 5 : conclusion ==> nothing is happening !
+
+
+
+
+
+
+// - -- - -- - -- case 6 : add multiples values - -- - -- - --
+let add_multiple_values = array_fire_pokemon.splice(array_fire_pokemon.length, 0, "Arcanine", "Flareon", "Ho-oh");
+
+// Let's see the final result
+console.log(array_fire_pokemon);
+
+// - -- - -- - -- case 6 : conclusion ==> successfully adding some new fire type
+
+// Gotta catch 'em all !
+
+
+
+
+// -==- -==- -==- case 7 : negative number and index -==- -==- -==-
+
+// What happen if the number and the index are negatives ?
+
+// Who can save us from here ? --- --- ---
+
+// Let's save ourselves and save yourself !
+
+let negative_index = array_fire_pokemon.splice(-2);
+console.log(array_fire_pokemon);
+
+// Oh no ! It seems to count from the end of the array and then the 2 last items have been removed !
+
+
+
+
+let negative_position = array_fire_pokemon.splice(-2, -2);
+console.log(array_fire_pokemon);
+
+// It seems that nothing happen from here
+
+
+
+
+let negative_index_and_position = array_fire_pokemon.splice(-2, 0, "something");
+console.log(array_fire_pokemon);
+
+// This is terrible ! It seems that something has been added at index -2
+
+// When the index is negative
+// Then the start of the array is from the end of the array
+// Like a reverse world !
+
+// When the number of removed items is negative or equal to zero
+// Then nothing happen
+
+// If the number of removed items is positive
+// Then the number of removed items is applied
+
+// Let's say the number of removed items is 3
+// Then, do not be surprised if there are 3 items removed from the array at the index position
+
+// -==- -==- -==- case 7 : conclusion ==> do not use negative number or index
+// Or use it with caution : this might be dangerous and cause unexpected result
+
+
+
+
+
+
+
+
+// -\\- -\\- -\\- case 8 : splice() with only 1 parameter -\\- -\\- -\\-
+let remove_something_unexpected = array_fire_pokemon.splice(4);
+console.log(array_fire_pokemon);
+
+// This is very impresssing, but expected
+// With only one parameter in the splice()
+// From the index position, everything after this index has been removed
+
+// -\\- -\\- -\\- case 8 : conclusion ==> this is convenient when a lot of datas in the array must be removed
+
+
+
+
 

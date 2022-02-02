@@ -341,3 +341,40 @@ console.log(array_fire_pokemon);
 
 
 
+// FINAL AND LAST WORD FOR THE SPLICE(start, number, data)
+// 1. start ==> this is the beginning position in the array, also known as the index
+// 2. number ==> this is number of items to remove from the index position in the array
+// 3. data ==> this is the data to add in the array from the index position
+
+
+
+// --- --- --- --- ---
+
+console.log("--- --- --- Have a break, have a cake --- --- ---");
+
+
+
+
+
+// It's time to practice a special jutsu
+
+// Cloning !
+
+// Let's do a copy of our array
+
+
+let shadow_clone = [...array_fire_pokemon];
+console.log(shadow_clone);
+
+// This returns a list of values from the array
+console.log(...array_fire_pokemon);
+
+// This type is : an object
+console.log(typeof [...array_fire_pokemon]);
+
+// Let's see the cloning thing
+console.log(shadow_clone);
+
+
+
+

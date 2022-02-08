@@ -133,10 +133,13 @@ function concatenate_something(start, end) {
     }
 }
 
-
+// Correct cases
 console.log(concatenate_something(1,5));
 console.log(concatenate_something(0,0));
+
+// Incorrect cases
 console.log(concatenate_something(-1,0));
+console.log(concatenate_something(1,-1));
 console.log(concatenate_something(-1,-2));
 console.log(concatenate_something(10,1));
 
@@ -150,7 +153,7 @@ console.log(content);
 
 // == == == == == == == == == == == == == == == == ==
 
-/*
+
 
 const omega = ["o", "m", "e", "g", "a"];
 console.log(omega);
@@ -161,6 +164,117 @@ console.log(omega_concat);
 const final_omega_concat = omega.concat("- space -", omega_concat, "something else");
 console.log(final_omega_concat);
 
-*/
+
 
 // == == == == == == == == == == == == == == == == ==
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Some more exercise
+
+
+function hard_work(inside){
+    let array_thing = [];
+    if (inside < 0){
+        console.log(`inside = ${inside} and is negative`);
+        return array_thing.concat("END of recursive !");
+    }
+
+    if (inside >= 10){
+        console.log(`inside = ${inside} and is positive but exceed`);
+        return array_thing.concat(inside);
+    }
+
+    
+    if (inside == 0){
+        console.log(`inside = ${inside} and is zero`);
+        return array_thing.concat(inside);
+    }
+    
+    if (inside > 0){
+        console.log(`This is inside : ${inside}`);
+        array_thing = array_thing.concat(inside);
+        return array_thing.concat(hard_work(inside +1));
+    }
+    return array_thing;
+};
+
+console.log(hard_work(-1));
+console.log(hard_work(0));
+console.log(hard_work(100));
+console.log(hard_work(5));
+
+
+
+
+console.log(`
+
+
+
+
+
+
+`);
+
+// --- --- --- --- --- --- --- --- --- --- --- --- ---
+
+
+
+
+
+
+// More fun
+
+
+function legendary (mew, mewtwo){
+
+    if (mew < 0 || mewtwo < 0) {
+        if (mew < 0) {
+            console.log(`INCORRECT ! mew is ${mew}`);
+        }
+        else {
+            console.log(`INCORRECT ! mewtwo is ${mewtwo}`);
+        }
+        //console.log(`INCORRECT ! Negative value !`);
+    }
+
+    else if (mew == 0 || mewtwo == 0) {
+        if (mew == 0) {
+            console.log(`mew is zero ==> ${mew}`);
+        }
+        else {
+            console.log(`mewtwo is zero ==> ${mewtwo}`);
+        }
+    }
+
+
+};
+
+
+// Good cases
+legendary(1, 5);
+legendary(1,1);
+legendary(0,0);
+
+// Bad cases
+legendary(-1, -1);
+legendary(10, -100);
+legendary(-100, 10);
+
